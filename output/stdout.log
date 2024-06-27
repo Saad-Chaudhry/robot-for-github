@@ -1,0 +1,56 @@
+
+Collecting tasks from: tasks.py
+=================== Running: [96morder_robot_from_RobotSpareBin[0m ====================
+[96morder_robot_from_RobotSpareBin[0m status: [91mFAIL
+[0m[91m
+Page.click: Timeout 30000ms exceeded.
+Call log:
+waiting for locator("#order-another")
+  -   locator resolved to <button type="submit" id="order-another" class="btn btn-…>Order another robot</button>
+  - attempting click action
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   performing click action
+
+[0m=========== Full Traceback (running [96morder_robot_from_RobotSpareBin[0m) ============
+[91mTraceback (most recent call last):
+  File "C:\ProgramData\robocorp\ht\5d1c186_b1f3c24_691db988\lib\site-packages\robocorp\tasks\_commands.py", line 440, in run
+    result = task.run(*args, **kwargs)
+  File "C:\ProgramData\robocorp\ht\5d1c186_b1f3c24_691db988\lib\site-packages\robocorp\tasks\_task.py", line 89, in run
+    return self.method(*args, **kwargs)
+  File "c:\Data\Python\robocorp\robot-for-github\tasks.py", line 21, in order_robot_from_RobotSpareBin
+    fill_form_with_csv_data()
+  File "c:\Data\Python\robocorp\robot-for-github\tasks.py", line 88, in fill_form_with_csv_data
+    fill_and_submit_robot_data(order)
+  File "c:\Data\Python\robocorp\robot-for-github\tasks.py", line 70, in fill_and_submit_robot_data
+    order_another_bot()
+  File "c:\Data\Python\robocorp\robot-for-github\tasks.py", line 40, in order_another_bot
+    page.click("#order-another")
+  File "C:\ProgramData\robocorp\ht\5d1c186_b1f3c24_691db988\lib\site-packages\playwright\sync_api\_generated.py", line 9492, in click
+    self._sync(
+  File "C:\ProgramData\robocorp\ht\5d1c186_b1f3c24_691db988\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "C:\ProgramData\robocorp\ht\5d1c186_b1f3c24_691db988\lib\site-packages\playwright\_impl\_page.py", line 753, in click
+    return await self._main_frame.click(**locals_to_params(locals()))
+  File "C:\ProgramData\robocorp\ht\5d1c186_b1f3c24_691db988\lib\site-packages\playwright\_impl\_frame.py", line 488, in click
+    await self._channel.send("click", locals_to_params(locals()))
+  File "C:\ProgramData\robocorp\ht\5d1c186_b1f3c24_691db988\lib\site-packages\playwright\_impl\_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\robocorp\ht\5d1c186_b1f3c24_691db988\lib\site-packages\playwright\_impl\_connection.py", line 513, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.click: Timeout 30000ms exceeded.
+Call log:
+waiting for locator("#order-another")
+  -   locator resolved to <button type="submit" id="order-another" class="btn btn-…>Order another robot</button>
+  - attempting click action
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   performing click action
+
+
+[0m================================================================================
+Robocorp Log (html): c:\Data\Python\robocorp\robot-for-github\output\log.html
